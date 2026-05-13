@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs</title>
+    <style>
+      label,
+      span {
+        display: block;
+      }
+
+      label {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bem-vindo!</h1>
+
+    <h2>Cadastro</h2>
+    <form action="/api/auth/register" method="post">
+      <label>
+        <span>Nome completo</span>
+        <input type="text" required />
+      </label>
+
+      <label>
+        <span>Email</span>
+        <input type="email" required placeholder="example@email.com" />
+      </label>
+
+      <label>
+        <span>Senha</span>
+        <input type="password" required />
+      </label>
+
+      <label>
+        <span>Sexo</span>
+        <input type="radio" name="sexo" /> M
+        <input type="radio" name="sexo" /> F
+      </label>
+
+      <input type="submit" value="Cadastrar" />
+    </form>
+
+    <h2>Login</h2>
+    <form accept="/api/auth/login" method="post">
+      <label>
+        <span>Email</span>
+        <input type="email" required placeholder="example@email.com" />
+      </label>
+
+      <label>
+        <span>Senha</span>
+        <input type="password" required />
+      </label>
+
+      <input type="submit" value="Entrar" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 30px;
+}
+
+table {
+  width: 600px;
+}
+
+table > thead {
+  background-color: #03cc03;
+}
+table > tbody {
+  background-color: red;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody > tr:hover {
+  background-color: #bebebe;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #eee;
+}
