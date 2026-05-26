@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formatando formulários com CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Aulas referentes: Formatando formulários no CSS (1/2) e Formatando formulários no CSS (2/2) -->
+
+    <h2>Cadastro</h2>
+
+    <form action="index.html" method="get">
+      <label>
+        Nome Completo:<br />
+        <input type="text" name="nome" required />
+      </label>
+
+      <label>
+        Descrição:<br />
+        <textarea name="descricao"></textarea>
+      </label>
+
+      <label>
+        Categorias:<br />
+        <select name="Categoria" required>
+          <option value="" selected>-- Selecione uma categoria --</option>
+          <option value="1">Categoria 1</option>
+          <option value="2">Categoria 2</option>
+          <option value="3">Categoria 3</option>
+          <option value="4">Categoria 4</option>
+          <option value="5">Categoria 5</option>
+        </select>
+      </label>
+
+      <label>
+        <input type="checkbox" />
+        Declaro que li e aceito os
+        <a
+          href="paginas/termos.html"
+          class="termos-de-uso"
+          target="_blank"
+          rel="external"
+          >termos de uso</a
+        >.
+      </label>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </body>
+</html>
