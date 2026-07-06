@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fieldset e legend</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data">
+      <div class="form-container">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <label>
+            <div>Primeiro nome:</div>
+            <input
+              type="text"
+              name="name"
+              required
+              minlength="2"
+              maxlength="12"
+            />
+          </label>
+
+          <label>
+            <div>Sobrenome:</div>
+            <input
+              type="text"
+              name="lastname"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+          </label>
+
+          <label>
+            <div>Foto de perfil:</div>
+            <input type="file" name="avatar" accept="image/*" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Dados profissionais</legend>
+          <label>
+            <div>Nome da empresa:</div>
+            <input type="text" name="companyname" />
+          </label>
+          <label>
+            <div>Cargo na empresa:</div>
+            <input type="text" name="companyjobtitle" />
+          </label>
+          <br />
+        </fieldset>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </body>
+</html>
