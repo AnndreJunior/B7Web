@@ -1,5 +1,7 @@
 # Imagens responsivas
 
+## Picture
+
 Podemos definir diferentes imagens a depender do tamanho da tela. Isso significa que podemos ter a mesma imagem em resoluções diferentes e ir usando cada uma.
 
 Para isso usamos a tag picture, dentro dela definimos uma tag img que será a imagem padrão e tags source que irão conter outras imagens que serão exibidas conforme o tamanho da tela.
