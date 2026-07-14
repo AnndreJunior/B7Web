@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagens responsivas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <picture>
+      <source
+        media="(min-width: 650px)"
+        srcset="
+          https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHW5sJI02gelzcrbYOsQhZ1o-MJaqW9zb2rdbgTz8aog&s=10
+        "
+      />
+      <source
+        media="(min-width: 450px)"
+        srcset="
+          https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7gqMKDtvIkwEl7sKKRZTIb9FSCaYwlJSFtypephnAg9sslLlEBIwO6Cw&s=10
+        "
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Vo0XQDIbPvGT8ndOPICsPjXv9NdTH16zaYw1YtMSDw&s=10"
+        alt="A"
+      />
+    </picture>
+  </body>
+</html>
