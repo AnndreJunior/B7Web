@@ -1,0 +1,55 @@
+body,
+html {
+  font-size: 18px;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+table,
+td {
+  border: 2px solid #000;
+}
+
+/* Mudará o estilo do título ao imprimir a página */
+@media only print {
+  h1 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  table,
+  td {
+    border: 0;
+  }
+}
+
+/* Orientation no media query */
+
+.orientation-media-query {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orientation-media-query div {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #000;
+}
+
+/* Orientação horizontal */
+@media (orientation: landscape) {
+  .orientation-media-query {
+    flex-direction: row;
+  }
+}
+
+/* Orientação horizontal */
+/* @media (orientation: portrait) {
+  .orientation-media-query {
+    flex-direction: column;
+  }
+} */
