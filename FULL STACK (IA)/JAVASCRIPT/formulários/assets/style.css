@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background-color: #4545fb;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  outline: none;
+  color: #565656;
+  font-size: 1.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+button {
+  border: none;
+  font-size: 1.3rem;
+  padding: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  color: #ffff;
+}
+
+.message-icon {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
