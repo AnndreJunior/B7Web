@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Painel simples para registrar despesas e acompanhar gastos por categoria."
+    />
+    <title>Painel de Despesas</title>
+  </head>
+  <body>
+    <div id="app" class="layout">
+      <aside class="sidebar">
+        <header class="sidebar-topo">
+          <span class="sidebar-marca">Painel de Despesas</span>
+          <h1 class="sidebar-titulo">Resumo</h1>
+        </header>
+
+        <section class="resumo-total" aria-labelledby="titulo-total-geral">
+          <h2 id="titulo-total-geral" class="resumo-rotulo">Total geral</h2>
+          <p id="total-geral" class="total-geral" aria-live="polite">R$ 0,00</p>
+        </section>
+
+        <section class="resumo-categorias" aria-labelledby="titulo-por-categoria">
+          <h2 id="titulo-por-categoria" class="resumo-rotulo">Por categoria</h2>
+          <ul id="totais-por-categoria" class="totais-categoria">
+            <li class="total-categoria">
+              <span class="total-categoria-nome">Alimento</span>
+              <span id="total-alimento" class="total-categoria-valor">R$ 0,00</span>
+            </li>
+            <li class="total-categoria">
+              <span class="total-categoria-nome">Transporte</span>
+              <span id="total-transporte" class="total-categoria-valor">R$ 0,00</span>
+            </li>
+            <li class="total-categoria">
+              <span class="total-categoria-nome">Lazer</span>
+              <span id="total-lazer" class="total-categoria-valor">R$ 0,00</span>
+            </li>
+            <li class="total-categoria">
+              <span class="total-categoria-nome">Saúde</span>
+              <span id="total-saúde" class="total-categoria-valor">R$ 0,00</span>
+            </li>
+            <li class="total-categoria">
+              <span class="total-categoria-nome">Outros</span>
+              <span id="total-outros" class="total-categoria-valor">R$ 0,00</span>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="conteudo">
+        <section class="card" aria-labelledby="titulo-nova-despesa">
+          <h2 id="titulo-nova-despesa" class="card-titulo">Nova despesa</h2>
+          <p class="card-descricao">
+            Informe o título, o valor e a categoria para registrar a despesa.
+          </p>
+
+          <form id="form-despesa" class="form-despesa" novalidate>
+            <div class="campo">
+              <label for="campo-titulo" class="campo-rotulo">Título</label>
+              <input
+                id="campo-titulo"
+                name="titulo"
+                type="text"
+                class="campo-entrada"
+                placeholder="Ex.: Mercado do mês"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="campo-valor" class="campo-rotulo">Valor (R$)</label>
+              <input
+                id="campo-valor"
+                name="valor"
+                type="number"
+                class="campo-entrada"
+                placeholder="0,00"
+                min="0.01"
+                step="0.01"
+                inputmode="decimal"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="campo-categoria" class="campo-rotulo">Categoria</label>
+              <select id="campo-categoria" name="categoria" class="campo-entrada">
+                <option value="">Selecione uma categoria</option>
+                <option value="alimento">Alimento</option>
+                <option value="transporte">Transporte</option>
+                <option value="lazer">Lazer</option>
+                <option value="saúde">Saúde</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+
+            <p id="erro-formulario" class="form-erro" role="alert" hidden></p>
+
+            <button type="submit" class="botao-adicionar">Adicionar despesa</button>
+          </form>
+        </section>
+
+        <section class="card" aria-labelledby="titulo-lista-despesas">
+          <h2 id="titulo-lista-despesas" class="card-titulo">Despesas</h2>
+
+          <p id="lista-vazia" class="lista-vazia">
+            Nenhuma despesa registrada ainda. Adicione a primeira acima.
+          </p>
+
+          <ul id="lista-despesas" class="lista-despesas"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
